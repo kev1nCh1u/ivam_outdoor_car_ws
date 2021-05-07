@@ -5,6 +5,9 @@
 
 <include file="$(find simulation_environment)/launch/apartment.launch"/>
 
+<node name="AnhungControl" pkg="AnhungControl" type="AnhungControl"
+  args="192.168.72.224 9930"/>
+
 <node name="joystick" pkg="JoyStick" type="joystick"
   args="/dev/input/js0"/>
 
