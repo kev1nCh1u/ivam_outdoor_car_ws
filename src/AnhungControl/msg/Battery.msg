@@ -1,0 +1,14 @@
+float64 Voltage
+float64 Current
+float64 RelativeSOC1
+float64 RelativeSOC2
+float64 RelativeSOC3
+float64 RelativeSOC4
+float64 AbsoluteSOC1
+float64 AbsoluteSOC2
+float64 AbsoluteSOC3
+float64 AbsoluteSOC4
+float64 Temp1
+float64 Temp2
+float64 Temp3
+float64 Temp4

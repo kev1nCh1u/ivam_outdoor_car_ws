@@ -1,0 +1,1 @@
+/home/user/ros/outdoor_car_ws/devel/./cmake.lock 3
