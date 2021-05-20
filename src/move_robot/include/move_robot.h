@@ -46,14 +46,14 @@
 #include "trans.h"
 #include "kinematics.h"
 #include "sendrev.h"
-#include "MPC.h"
+//#include "MPC.h"
 
 
 
 
 
-#define CarParameterPATH_Local "/src/move_robot/parameter/car_parameter"
-#define LocalparPATH_Local "/src/move_robot/parameter/local_parameter"
+#define CarParameterPATH_Local "/move_robot/parameter/car_parameter"
+#define LocalparPATH_Local "/move_robot/parameter/local_parameter"
 
 #define PUSE_BUTTON_A 0
 #define PUSE_BUTTON_B 1
@@ -313,7 +313,7 @@ protected:
 	Car_Kinematics Car;
 	trans tra;
     sendrev sendreceive;
-    MPC mpc;
+    //MPC mpc;
 
 	//ROS Subscriber & Publisher
 	ros::NodeHandle node_;
@@ -490,7 +490,7 @@ float Move_Robot::v_buf = 0.04;
 Move_Robot::Move_Robot(char *dev_name, int Baudrate)
 {
     // LoadTitlePath();
-    // CarParameterPATH = TitlePath + CarParameterPATH_Local;
+    CarParameterPATH = TitlePath + CarParameterPATH_Local;
 	ChangToTraffic = false;
 	ChangToTraffic_finishstop = false;
     //local_parameter
@@ -762,7 +762,8 @@ void Move_Robot::LoadCarParameter(std::string file_buf)
     fin.open(file, std::fstream::in);
     if(!fin.is_open())
     {
-        ROS_INFO("Error: CarParameter is not opened!!");
+        ROS_INFO("Error: CarParameter is not opened!!   123");
+        std::cout << "> " << file_buf.c_str() << std::endl;
     }
     else{
         ROS_INFO("the file is opened!!");

@@ -1,5 +1,5 @@
 #include "move_robot.h"
-#include "MPC_Diff_vw.h"
+//#include "MPC_Diff_vw.h"
 #include "Diff_vw.h"
 #include "Diff_vw_A.h"
 
@@ -53,11 +53,11 @@ int main(int argc, char **argv)
                  Diff_vw = new diff_vw(argv[1], baudrate);
             break;
 
-	    case 5:
-                 std::cout<<"CarKind = MPC_DIFF_vw  "<<std::endl;
-                 mpc_diff_vw *MPC_Diff_vw;
-                 MPC_Diff_vw = new mpc_diff_vw(argv[1], baudrate);
-            break;
+	    // case 5:
+        //          std::cout<<"CarKind = MPC_DIFF_vw  "<<std::endl;
+        //          mpc_diff_vw *MPC_Diff_vw;
+        //          MPC_Diff_vw = new mpc_diff_vw(argv[1], baudrate);
+        //     break;
 
             default:
             break;
@@ -93,6 +93,7 @@ bool LoadCarKind(std::string file_buf,int &returnbuf)
     if(!fin.is_open())
     {
         ROS_INFO("Error: CarParameter is not opened!!");
+        std::cout << "> " << file_buf.c_str() << std::endl;
         return false;
     }
     else{
