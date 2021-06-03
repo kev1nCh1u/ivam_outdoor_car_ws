@@ -23,7 +23,7 @@ speedup
 speed
 0.6
 JOYSTICK_SCALAR
-0.6
+1
 OBS_Front
 0.9
 OBS_Side

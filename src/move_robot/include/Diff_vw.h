@@ -119,7 +119,7 @@ diff_vw::diff_vw(char* dev_name, int Baudrate):Move_Robot(dev_name, Baudrate)
 
 	stop_w_max = 0.65;
 	stop_w_min = 0.05;
-	move_w_max = 0.5;
+	move_w_max = 0.8;
 	predict_turn_dis = 1.5;
 	predict_turn_R = 1.0;
 
